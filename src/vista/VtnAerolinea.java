@@ -70,13 +70,47 @@ public class VtnAerolinea extends javax.swing.JFrame {
         jLblAsiento30 = new javax.swing.JLabel();
         jlabelImagenAvion = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jPanelVentanilla1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jTfAsientoVentanilla1 = new javax.swing.JTextField();
+        jTfClienteVentanilla1 = new javax.swing.JTextField();
+        jBtnCambiarVentanilla1 = new javax.swing.JButton();
+        jBtnReservarVentanilla1 = new javax.swing.JButton();
+        jBtnEliminarVentanilla1 = new javax.swing.JButton();
+        jPanelVentanilla2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jTfClienteVentanilla2 = new javax.swing.JTextField();
+        jTfAsientoVentanilla2 = new javax.swing.JTextField();
+        jBtnReservarVentanilla2 = new javax.swing.JButton();
+        jBtnEliminarVentanilla2 = new javax.swing.JButton();
+        jBtnCambiarVentanilla2 = new javax.swing.JButton();
+        jPanelVentanilla3 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jTfClienteVentanilla3 = new javax.swing.JTextField();
+        jTfAsientoVentanilla3 = new javax.swing.JTextField();
+        jBtnReservarVentanilla3 = new javax.swing.JButton();
+        jBtnEliminarVentanilla3 = new javax.swing.JButton();
+        jBtnCambiarVentanilla3 = new javax.swing.JButton();
+        jPanelRegistro = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField3 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableClientes = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Reservar Asiento");
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(java.awt.Color.white);
-        setMinimumSize(new java.awt.Dimension(1140, 900));
+        setMinimumSize(new java.awt.Dimension(1140, 850));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLblAsiento1.setBackground(new java.awt.Color(102, 255, 102));
@@ -289,13 +323,199 @@ public class VtnAerolinea extends javax.swing.JFrame {
         jLblAsiento30.setOpaque(true);
         getContentPane().add(jLblAsiento30, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 110, 30, 30));
         getContentPane().add(jlabelImagenAvion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 210));
-        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 1140, 10));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 1140, 10));
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(255, 102, 102), null), "Ventanilla 1", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 12), new java.awt.Color(0, 0, 0))); // NOI18N
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 220, 250));
+        jPanelVentanilla1.setBackground(new java.awt.Color(204, 204, 204));
+        jPanelVentanilla1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(255, 102, 102), null), "Ventanilla 1", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanelVentanilla1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("Asiento:");
+        jPanelVentanilla1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+
+        jLabel2.setText("Cliente:");
+        jPanelVentanilla1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        jPanelVentanilla1.add(jTfAsientoVentanilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 120, -1));
+        jPanelVentanilla1.add(jTfClienteVentanilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 120, -1));
+
+        jBtnCambiarVentanilla1.setText("Cambiar Asiento");
+        jBtnCambiarVentanilla1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCambiarVentanilla1ActionPerformed(evt);
+            }
+        });
+        jPanelVentanilla1.add(jBtnCambiarVentanilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 180, -1));
+
+        jBtnReservarVentanilla1.setText("Reservar Asiento");
+        jBtnReservarVentanilla1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnReservarVentanilla1ActionPerformed(evt);
+            }
+        });
+        jPanelVentanilla1.add(jBtnReservarVentanilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 180, -1));
+
+        jBtnEliminarVentanilla1.setText("Eliminar Reservacion");
+        jBtnEliminarVentanilla1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnEliminarVentanilla1ActionPerformed(evt);
+            }
+        });
+        jPanelVentanilla1.add(jBtnEliminarVentanilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 180, -1));
+
+        getContentPane().add(jPanelVentanilla1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, 220, 250));
+
+        jPanelVentanilla2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanelVentanilla2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(255, 102, 102), null), "Ventanilla 2", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanelVentanilla2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setText("Cliente:");
+        jPanelVentanilla2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        jLabel4.setText("Asiento:");
+        jPanelVentanilla2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanelVentanilla2.add(jTfClienteVentanilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 120, -1));
+        jPanelVentanilla2.add(jTfAsientoVentanilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 120, -1));
+
+        jBtnReservarVentanilla2.setText("Reservar Asiento");
+        jBtnReservarVentanilla2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnReservarVentanilla2ActionPerformed(evt);
+            }
+        });
+        jPanelVentanilla2.add(jBtnReservarVentanilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 180, -1));
+
+        jBtnEliminarVentanilla2.setText("Eliminar Reservacion");
+        jBtnEliminarVentanilla2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnEliminarVentanilla2ActionPerformed(evt);
+            }
+        });
+        jPanelVentanilla2.add(jBtnEliminarVentanilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 180, -1));
+
+        jBtnCambiarVentanilla2.setText("Cambiar Asiento");
+        jBtnCambiarVentanilla2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCambiarVentanilla2ActionPerformed(evt);
+            }
+        });
+        jPanelVentanilla2.add(jBtnCambiarVentanilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 180, -1));
+
+        getContentPane().add(jPanelVentanilla2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 220, 250));
+
+        jPanelVentanilla3.setBackground(new java.awt.Color(204, 204, 204));
+        jPanelVentanilla3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED, new java.awt.Color(255, 102, 102), null), "Ventanilla 3", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanelVentanilla3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setText("Cliente:");
+        jPanelVentanilla3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        jLabel6.setText("Asiento:");
+        jPanelVentanilla3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        jPanelVentanilla3.add(jTfClienteVentanilla3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 120, -1));
+        jPanelVentanilla3.add(jTfAsientoVentanilla3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 120, -1));
+
+        jBtnReservarVentanilla3.setText("Reservar Asiento");
+        jBtnReservarVentanilla3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnReservarVentanilla3ActionPerformed(evt);
+            }
+        });
+        jPanelVentanilla3.add(jBtnReservarVentanilla3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 180, -1));
+
+        jBtnEliminarVentanilla3.setText("Eliminar Reservacion");
+        jBtnEliminarVentanilla3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnEliminarVentanilla3ActionPerformed(evt);
+            }
+        });
+        jPanelVentanilla3.add(jBtnEliminarVentanilla3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 180, -1));
+
+        jBtnCambiarVentanilla3.setText("Cambiar Asiento");
+        jBtnCambiarVentanilla3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCambiarVentanilla3ActionPerformed(evt);
+            }
+        });
+        jPanelVentanilla3.add(jBtnCambiarVentanilla3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 180, -1));
+
+        getContentPane().add(jPanelVentanilla3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 220, 250));
+
+        jPanelRegistro.setBackground(new java.awt.Color(204, 204, 204));
+        jPanelRegistro.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 51)), "Registro", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Segoe UI", 1, 14), new java.awt.Color(0, 0, 0))); // NOI18N
+        jPanelRegistro.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setText("Direccion:");
+        jPanelRegistro.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        jLabel8.setText("Cedula:");
+        jPanelRegistro.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+
+        jLabel9.setText("Nombres:");
+        jPanelRegistro.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        jPanelRegistro.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 120, -1));
+        jPanelRegistro.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 120, -1));
+        jPanelRegistro.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 120, -1));
+
+        getContentPane().add(jPanelRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 260, 220, 250));
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTableClientes.setBackground(new java.awt.Color(204, 204, 204));
+        jTableClientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null}
+            },
+            new String [] {
+                "Clientes Registrados"
+            }
+        ));
+        jScrollPane1.setViewportView(jTableClientes);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 710, 260));
+
+        jButton1.setText("Registrar");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 450, 160, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 1140, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBtnCambiarVentanilla1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCambiarVentanilla1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCambiarVentanilla1ActionPerformed
+
+    private void jBtnReservarVentanilla2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReservarVentanilla2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnReservarVentanilla2ActionPerformed
+
+    private void jBtnReservarVentanilla3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReservarVentanilla3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnReservarVentanilla3ActionPerformed
+
+    private void jBtnReservarVentanilla1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnReservarVentanilla1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnReservarVentanilla1ActionPerformed
+
+    private void jBtnEliminarVentanilla2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEliminarVentanilla2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnEliminarVentanilla2ActionPerformed
+
+    private void jBtnEliminarVentanilla3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEliminarVentanilla3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnEliminarVentanilla3ActionPerformed
+
+    private void jBtnEliminarVentanilla1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnEliminarVentanilla1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnEliminarVentanilla1ActionPerformed
+
+    private void jBtnCambiarVentanilla2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCambiarVentanilla2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCambiarVentanilla2ActionPerformed
+
+    private void jBtnCambiarVentanilla3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCambiarVentanilla3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCambiarVentanilla3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -340,6 +560,25 @@ public class VtnAerolinea extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBtnCambiarVentanilla1;
+    private javax.swing.JButton jBtnCambiarVentanilla2;
+    private javax.swing.JButton jBtnCambiarVentanilla3;
+    private javax.swing.JButton jBtnEliminarVentanilla1;
+    private javax.swing.JButton jBtnEliminarVentanilla2;
+    private javax.swing.JButton jBtnEliminarVentanilla3;
+    private javax.swing.JButton jBtnReservarVentanilla1;
+    private javax.swing.JButton jBtnReservarVentanilla2;
+    private javax.swing.JButton jBtnReservarVentanilla3;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLblAsiento1;
     private javax.swing.JLabel jLblAsiento10;
     private javax.swing.JLabel jLblAsiento11;
@@ -371,7 +610,22 @@ public class VtnAerolinea extends javax.swing.JFrame {
     private javax.swing.JLabel jLblAsiento9;
     private javax.swing.JLabel jLblAsientol27;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanelRegistro;
+    private javax.swing.JPanel jPanelVentanilla1;
+    private javax.swing.JPanel jPanelVentanilla2;
+    private javax.swing.JPanel jPanelVentanilla3;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTable jTableClientes;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTfAsientoVentanilla1;
+    private javax.swing.JTextField jTfAsientoVentanilla2;
+    private javax.swing.JTextField jTfAsientoVentanilla3;
+    private javax.swing.JTextField jTfClienteVentanilla1;
+    private javax.swing.JTextField jTfClienteVentanilla2;
+    private javax.swing.JTextField jTfClienteVentanilla3;
     private javax.swing.JLabel jlabelImagenAvion;
     // End of variables declaration//GEN-END:variables
 }
