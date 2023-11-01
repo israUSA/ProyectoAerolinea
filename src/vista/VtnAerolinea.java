@@ -494,6 +494,11 @@ public class VtnAerolinea extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 710, 260));
 
         jButton1.setText("Registrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 450, 160, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 1140, 640));
@@ -537,8 +542,8 @@ public class VtnAerolinea extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnCambiarVentanilla3ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+         DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
 
 // Paso 2: Recopila los datos de los campos de texto
     String nombre = jTextField2.getText(); // Campo de nombre
@@ -553,7 +558,8 @@ public class VtnAerolinea extends javax.swing.JFrame {
 
 // Paso 4: Actualiza el modelo de la tabla
     jTableClientes.setModel(model);
-    } 
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     /**
      * @param args the command line arguments
