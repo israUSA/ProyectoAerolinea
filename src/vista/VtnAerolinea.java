@@ -17,13 +17,32 @@ import javax.swing.JLabel;
  */
 public class VtnAerolinea extends javax.swing.JFrame {
 
+    private int contador = 0;
+
     /**
      * Creates new form VtnAerolinea
      */
     public VtnAerolinea() {
         initComponents();
        
- 
+
+        jTableClientes.setModel(new javax.swing.table.DefaultTableModel(
+        new Object [][] {
+        // Filas iniciales si es que las tienes
+        },
+        new String [] {
+        "Id", "Nombre", "Cédula", "Dirección"  // Nombres de las columnas
+        }
+        ) {
+        boolean[] canEdit = new boolean [] {
+        false, false, false  // Permisos de edición de las columnas
+        };
+
+        public boolean isCellEditable(int rowIndex, int columnIndex) {
+        return canEdit [columnIndex];
+        }
+        });
+        
         setResizable(false);
         this.setLocationRelativeTo(this);
         EscalarImageLabel(jlabelImagenAvion, "src/assets/imagenAvion.jpeg");
@@ -64,7 +83,7 @@ public class VtnAerolinea extends javax.swing.JFrame {
         jLblAsiento24 = new javax.swing.JLabel();
         jLblAsiento25 = new javax.swing.JLabel();
         jLblAsiento26 = new javax.swing.JLabel();
-        jLblAsientol27 = new javax.swing.JLabel();
+        jLblAsiento27 = new javax.swing.JLabel();
         jLblAsiento28 = new javax.swing.JLabel();
         jLblAsiento29 = new javax.swing.JLabel();
         jLblAsiento30 = new javax.swing.JLabel();
@@ -516,6 +535,24 @@ public class VtnAerolinea extends javax.swing.JFrame {
     private void jBtnCambiarVentanilla3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCambiarVentanilla3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnCambiarVentanilla3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
+
+// Paso 2: Recopila los datos de los campos de texto
+    String nombre = jTextField2.getText(); // Campo de nombre
+    String cedula = jTextField3.getText(); // Campo de cédula
+    String direccion = jTextField1.getText(); // Campo de dirección
+    
+    contador++;
+
+
+// Paso 3: Agrega los datos al modelo de la tabla
+    model.addRow(new Object[]{contador, nombre, cedula, direccion});
+
+// Paso 4: Actualiza el modelo de la tabla
+    jTableClientes.setModel(model);
+    } 
 
     /**
      * @param args the command line arguments
