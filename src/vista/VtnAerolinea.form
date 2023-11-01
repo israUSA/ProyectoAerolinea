@@ -607,7 +607,7 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLblAsientol27">
+    <Component class="javax.swing.JLabel" name="jLblAsiento27">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="66" green="ff" red="66" type="rgb"/>

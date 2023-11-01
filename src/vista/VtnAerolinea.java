@@ -10,6 +10,7 @@ import java.awt.Toolkit;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -314,12 +315,12 @@ public class VtnAerolinea extends javax.swing.JFrame {
         jLblAsiento26.setOpaque(true);
         getContentPane().add(jLblAsiento26, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 110, 30, 30));
 
-        jLblAsientol27.setBackground(new java.awt.Color(102, 255, 102));
-        jLblAsientol27.setForeground(new java.awt.Color(102, 255, 102));
-        jLblAsientol27.setText("jLabel1");
-        jLblAsientol27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jLblAsientol27.setOpaque(true);
-        getContentPane().add(jLblAsientol27, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, 30, 30));
+        jLblAsiento27.setBackground(new java.awt.Color(102, 255, 102));
+        jLblAsiento27.setForeground(new java.awt.Color(102, 255, 102));
+        jLblAsiento27.setText("jLabel1");
+        jLblAsiento27.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLblAsiento27.setOpaque(true);
+        getContentPane().add(jLblAsiento27, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, 30, 30));
 
         jLblAsiento28.setBackground(new java.awt.Color(102, 255, 102));
         jLblAsiento28.setForeground(new java.awt.Color(102, 255, 102));
@@ -635,6 +636,7 @@ public class VtnAerolinea extends javax.swing.JFrame {
     private javax.swing.JLabel jLblAsiento24;
     private javax.swing.JLabel jLblAsiento25;
     private javax.swing.JLabel jLblAsiento26;
+    private javax.swing.JLabel jLblAsiento27;
     private javax.swing.JLabel jLblAsiento28;
     private javax.swing.JLabel jLblAsiento29;
     private javax.swing.JLabel jLblAsiento3;
@@ -645,7 +647,6 @@ public class VtnAerolinea extends javax.swing.JFrame {
     private javax.swing.JLabel jLblAsiento7;
     private javax.swing.JLabel jLblAsiento8;
     private javax.swing.JLabel jLblAsiento9;
-    private javax.swing.JLabel jLblAsientol27;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelRegistro;
     private javax.swing.JPanel jPanelVentanilla1;
