@@ -9,7 +9,10 @@ import java.awt.Image;
 import java.awt.Toolkit;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -118,13 +121,14 @@ public class VtnAerolinea extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        jTfDireccion = new javax.swing.JTextField();
+        jTfNombres = new javax.swing.JTextField();
+        jTfCedula = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableClientes = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        jBtnRegistrar = new javax.swing.JButton();
+        jlblResultadoOperacion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Reservar Asiento");
@@ -471,9 +475,9 @@ public class VtnAerolinea extends javax.swing.JFrame {
 
         jLabel9.setText("Nombres:");
         jPanelRegistro.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
-        jPanelRegistro.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 120, -1));
-        jPanelRegistro.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 120, -1));
-        jPanelRegistro.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 120, -1));
+        jPanelRegistro.add(jTfDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 160, 120, -1));
+        jPanelRegistro.add(jTfNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 120, -1));
+        jPanelRegistro.add(jTfCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 100, 120, -1));
 
         getContentPane().add(jPanelRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 260, 220, 250));
 
@@ -493,13 +497,14 @@ public class VtnAerolinea extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 330, 710, 260));
 
-        jButton1.setText("Registrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBtnRegistrar.setText("Registrar");
+        jBtnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBtnRegistrarActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 450, 160, -1));
+        jPanel1.add(jBtnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 450, 160, -1));
+        jPanel1.add(jlblResultadoOperacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, -20, 210, 20));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 1140, 640));
 
@@ -542,23 +547,9 @@ public class VtnAerolinea extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnCambiarVentanilla3ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         DefaultTableModel model = (DefaultTableModel) jTableClientes.getModel();
+    private void jBtnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnRegistrarActionPerformed
 
-// Paso 2: Recopila los datos de los campos de texto
-    String nombre = jTextField2.getText(); // Campo de nombre
-    String cedula = jTextField3.getText(); // Campo de cédula
-    String direccion = jTextField1.getText(); // Campo de dirección
-    
-    contador++;
-
-
-// Paso 3: Agrega los datos al modelo de la tabla
-    model.addRow(new Object[]{contador, nombre, cedula, direccion});
-
-// Paso 4: Actualiza el modelo de la tabla
-    jTableClientes.setModel(model);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jBtnRegistrarActionPerformed
 
 
     /**
@@ -601,7 +592,133 @@ public class VtnAerolinea extends javax.swing.JFrame {
         Icon icon = new ImageIcon(image.getImage().getScaledInstance(labelImagen.getWidth(), labelImagen.getHeight(), Image.SCALE_DEFAULT));
         labelImagen.setIcon(icon);
         this.repaint();
+    }  
+
+    public JButton getjBtnCambiarVentanilla1() {
+        return jBtnCambiarVentanilla1;
     }
+
+    public void setjBtnCambiarVentanilla1(JButton jBtnCambiarVentanilla1) {
+        this.jBtnCambiarVentanilla1 = jBtnCambiarVentanilla1;
+    }
+
+    public JButton getjBtnCambiarVentanilla2() {
+        return jBtnCambiarVentanilla2;
+    }
+
+    public void setjBtnCambiarVentanilla2(JButton jBtnCambiarVentanilla2) {
+        this.jBtnCambiarVentanilla2 = jBtnCambiarVentanilla2;
+    }
+
+    public JButton getjBtnCambiarVentanilla3() {
+        return jBtnCambiarVentanilla3;
+    }
+
+    public void setjBtnCambiarVentanilla3(JButton jBtnCambiarVentanilla3) {
+        this.jBtnCambiarVentanilla3 = jBtnCambiarVentanilla3;
+    }
+
+    public JButton getjBtnEliminarVentanilla1() {
+        return jBtnEliminarVentanilla1;
+    }
+
+    public void setjBtnEliminarVentanilla1(JButton jBtnEliminarVentanilla1) {
+        this.jBtnEliminarVentanilla1 = jBtnEliminarVentanilla1;
+    }
+
+    public JButton getjBtnEliminarVentanilla2() {
+        return jBtnEliminarVentanilla2;
+    }
+
+    public void setjBtnEliminarVentanilla2(JButton jBtnEliminarVentanilla2) {
+        this.jBtnEliminarVentanilla2 = jBtnEliminarVentanilla2;
+    }
+
+    public JButton getjBtnEliminarVentanilla3() {
+        return jBtnEliminarVentanilla3;
+    }
+
+    public void setjBtnEliminarVentanilla3(JButton jBtnEliminarVentanilla3) {
+        this.jBtnEliminarVentanilla3 = jBtnEliminarVentanilla3;
+    }
+
+    public JButton getjBtnReservarVentanilla1() {
+        return jBtnReservarVentanilla1;
+    }
+
+    public void setjBtnReservarVentanilla1(JButton jBtnReservarVentanilla1) {
+        this.jBtnReservarVentanilla1 = jBtnReservarVentanilla1;
+    }
+
+    public JButton getjBtnReservarVentanilla2() {
+        return jBtnReservarVentanilla2;
+    }
+
+    public void setjBtnReservarVentanilla2(JButton jBtnReservarVentanilla2) {
+        this.jBtnReservarVentanilla2 = jBtnReservarVentanilla2;
+    }
+
+    public JButton getjBtnReservarVentanilla3() {
+        return jBtnReservarVentanilla3;
+    }
+
+    public void setjBtnReservarVentanilla3(JButton jBtnReservarVentanilla3) {
+        this.jBtnReservarVentanilla3 = jBtnReservarVentanilla3;
+    }
+
+    public JButton getjBtnRegistrar() {
+        return jBtnRegistrar;
+    }
+
+    public void setjBtnRegistrar(JButton jBtnRegistrar) {
+        this.jBtnRegistrar = jBtnRegistrar;
+    }
+
+    public JTextField getjTfCedula() {
+        return jTfCedula;
+    }
+
+    public void setjTfCedula(JTextField jTfCedula) {
+        this.jTfCedula = jTfCedula;
+    }
+
+    public JTextField getjTfDireccion() {
+        return jTfDireccion;
+    }
+
+    public void setjTfDireccion(JTextField jTfDireccion) {
+        this.jTfDireccion = jTfDireccion;
+    }
+
+    public JTextField getjTfNombres() {
+        return jTfNombres;
+    }
+
+    public void setjTfNombres(JTextField jTfNombres) {
+        this.jTfNombres = jTfNombres;
+    }
+
+    public JTable getjTableClientes() {
+        return jTableClientes;
+    }
+
+    public void setjTableClientes(JTable jTableClientes) {
+        this.jTableClientes = jTableClientes;
+    }
+
+    public int getContador() {
+        return contador;
+    }
+
+    public void setContador(int contador) {
+        this.contador = contador;
+    }
+    
+    public void incrementarContador(){
+        contador++;
+    }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBtnCambiarVentanilla1;
@@ -610,10 +727,10 @@ public class VtnAerolinea extends javax.swing.JFrame {
     private javax.swing.JButton jBtnEliminarVentanilla1;
     private javax.swing.JButton jBtnEliminarVentanilla2;
     private javax.swing.JButton jBtnEliminarVentanilla3;
+    private javax.swing.JButton jBtnRegistrar;
     private javax.swing.JButton jBtnReservarVentanilla1;
     private javax.swing.JButton jBtnReservarVentanilla2;
     private javax.swing.JButton jBtnReservarVentanilla3;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -661,15 +778,16 @@ public class VtnAerolinea extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable jTableClientes;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTfAsientoVentanilla1;
     private javax.swing.JTextField jTfAsientoVentanilla2;
     private javax.swing.JTextField jTfAsientoVentanilla3;
+    private javax.swing.JTextField jTfCedula;
     private javax.swing.JTextField jTfClienteVentanilla1;
     private javax.swing.JTextField jTfClienteVentanilla2;
     private javax.swing.JTextField jTfClienteVentanilla3;
+    private javax.swing.JTextField jTfDireccion;
+    private javax.swing.JTextField jTfNombres;
     private javax.swing.JLabel jlabelImagenAvion;
+    private javax.swing.JLabel jlblResultadoOperacion;
     // End of variables declaration//GEN-END:variables
 }

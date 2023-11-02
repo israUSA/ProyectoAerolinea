@@ -4,6 +4,7 @@
  */
 package principal;
 
+import controlador.CtrVtnAerolinea;
 import vista.VtnAerolinea;
 
 /**
@@ -21,6 +22,7 @@ public class Principal {
     
     private static void iniciarAplicacionAerolinea(){
         VtnAerolinea oVtnAerolinea = new VtnAerolinea();
+        new CtrVtnAerolinea(oVtnAerolinea);
         oVtnAerolinea.setVisible(true);
     }
 }
